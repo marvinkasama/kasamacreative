@@ -1,0 +1,304 @@
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+$color-primary:    #962D20 ;
+$color-secondary:  #7B59C0 ;
+$color-tertiary:   #41464D ;
+
+$color-lightest:          #E8F1EE ;
+$color-lighter:                 #F2F2F2;
+$color-light:                   #E0E0E0;
+$color-medium:                  #41464D;
+$color-dark:                    #6E6E6E;
+$color-darker:                  #444444;
+$color-darkest:                 #061014;
+
+// Base Colors
+$base-color: $color-darker ;
+$base-color-inverse: $color-lighter ;
+$base-color-bg: $color-lightest ;
+
+// Link Colors
+$link-color: $color-secondary;
+$link-hover-color: darken($link-color, 15%) ;
+
+// ==========================================================================
+// Base
+// ==========================================================================
+
+$base-font-weight: 400 ;
+$base-line-height: 1.6 ;
+
+$border-radius: 6px ;
+
+// ==========================================================================
+// Scaling
+// ==========================================================================
+
+$scale-ratio: 1.250 ; // Major Third Ratio
+$scale-unit: 16 ;
+
+// ==========================================================================
+// Space Sizes
+// ==========================================================================
+
+// Sets a baseline to be used by all the other space variables.
+
+$space-base: 8px ;
+
+// The Spaces map is great for maintaining consistency in your development.
+// Useful for padding and margins.
+//
+// e.g. property: map-get($spaces, sm);
+
+$spaces: (
+  xxxs: rem($space-base),
+  xxs: rem($space-base * 2),
+  xs: rem($space-base * 3),
+  sm: rem($space-base * 4),
+  md: rem($space-base * 5),
+  lg: rem($space-base * 6),
+  xl: rem($space-base * 7),
+  xxl: rem($space-base * 8),
+  xxxl: rem($space-base * 9)
+) ;
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+$font-family-primary: 'Montserrat', sans-serif ;
+$font-family-secondary: 'Montserrat', sans-serif ;
+$font-family-monospace: "Lucida Console",Courier,monospace ;
+
+$pararaph-margin: 0 0 map-get($spaces, xs) ;
+$heading-margin: 0 0 map-get($spaces, sm) ;
+
+// Font Sizes
+$size-xxxs: 10px ;
+$size-xxs: 12px ;
+$size-xs: 14px ;
+$size-sm: 16px ;
+$size-md: 18px ;
+$size-lg: 20px ;
+$size-xl: 32px ;
+$size-xxl: 40px ;
+$size-xxxl: 48px ;
+
+$size-base: $size-md ;
+
+// ==========================================================================
+// Blockquote
+// ==========================================================================
+
+$blockquote-border: 4px solid $color-dark ;
+$blockquote-padding: 0 0 0 map-get($spaces, xxxs) ;
+$blockquote-margin: 0 0 map-get($spaces, xxs) ;
+
+$cite-style: italic ;
+
+// ==========================================================================
+// Code
+// ==========================================================================
+
+$code-color: $color-primary ;
+$code-padding: rem(2px) rem(4px) ;
+$code-bg: $color-lighter ;
+
+
+// ==========================================================================
+// Zones
+// ==========================================================================
+
+$zone-header:  "header";
+$zone-content: "body-wrap";
+$zone-footer:  "footer";
+
+
+// ==========================================================================
+// Containers
+// ==========================================================================
+
+$container-max-widths: (
+  sm: rem(540px),
+  md: rem(720px),
+  lg: rem(960px),
+  xl: rem(1140px)
+);
+
+// ==========================================================================
+// Media Query Breakpoints
+// ==========================================================================
+
+// The breakpoint-min() & breakpoint-max() mixins we be rendered in EM units.
+// We'll perform the pixel to EM conversion within the mixins.
+// Please list breakpoints in pixel values.
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1600px
+);
+
+// ==========================================================================
+// Grids
+// ==========================================================================
+
+// Determines which breakpoints will have their own column classses.
+//
+// e.g. .grid__column--{GRID #}--{BREAKPOINT}
+//
+// Note: The keys set in the $grid-breakpoints variable must match those found in $breakpoints.
+// Otherwise the source will not compile.
+$grid-breakpoints: (
+  sm,
+  md,
+  lg,
+  xl
+) ;
+
+$grid-columns: 12 ;
+
+// Gutter is applied to padding-left and padding-right. The value is not split.
+$grid-gutter: map-get($spaces, xxs) ;
+
+// ==========================================================================
+// Dividers
+// ==========================================================================
+
+$divider-margin: map-get($spaces, xs) 0 ;
+$divider-height: 1px ;
+$divider-color: #dbdbdb ;
+
+// ==========================================================================
+// Lists
+// ==========================================================================
+
+$list-padding: 0 ;
+$list-margin: 0 0 map-get($spaces, xs) ;
+
+$unordered-list-style: circle inside ;
+$ordered-list-style: decimal inside ;
+
+$list-inline-space: map-get($spaces, xs) ;
+
+
+// ==========================================================================
+// Tables
+// ==========================================================================
+
+$table-cell-padding: map-get($spaces, xxxs) ;
+$table-stripped-odd-bg: $color-lighter ;
+$table-stripped-even-bg: $color-lightest ;
+
+
+// ==========================================================================
+// Headings
+// ==========================================================================
+
+$heading-color: $base-color ;
+$heading-color-inverse: $color-lighter ;
+$heading-line-height: 1.25 ;
+
+$lead-font-size: $size-md ;
+$lead-font-weight: 300 ;
+$lead-line-height: 1.6 ;
+
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+$form-label-weight: 600 ;
+$form-margin: 0 0 map-get($spaces, xxxs);
+
+$form-input-margin: 0 0 map-get($spaces, xs) ;
+$form-input-padding: map-get($spaces, xxxs) map-get($spaces, xxs) ;
+$form-input-border: 1px solid $color-light ;
+$form-input-radius: 0 ;
+$form-input-size: map-get($spaces, xxs) ;
+$form-input-color: $color-medium ;
+$form-input-bg: $color-lightest ;
+$form-input-focus: $color-primary ;
+
+// Textarea Height Sizes
+$control-textarea-sm: 80px ;
+$control-textarea-md: 140px ;
+$control-textarea-lg: 200px ;
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+$button-filled-color: $base-color-bg ;
+$button-filled-bg: $color-dark ;
+$button-outlined-color: $color-dark ;
+$button-clear-color: $color-dark ;
+
+$button-primary-color: $color-lightest ;
+$button-primary-bg: $color-primary ;
+$button-secondary-color: $color-lightest ;
+$button-secondary-bg: $color-secondary ;
+$button-tertiary-color: $color-lightest ;
+$button-tertiary-bg: $color-tertiary ;
+
+$button-border-radius: 0 ;
+$button-outlined-border-width: 2px ;
+
+// Used for creating button sizes with appropriate font-sizes.
+$button-sizes: (
+  xxxs: rem($size-xxxs),
+  xxs: rem($size-xxxs),
+  xs: rem($size-xxs),
+  sm: rem($size-xs),
+  md: rem($size-xs),
+  lg: rem($size-md),
+  xl: rem($size-lg),
+  xxl: rem($size-lg),
+  xxxl: rem($size-lg)
+) ;
+
+// Sets the padding of the corresponding keys in $button-sizes.
+$button-padding: (
+  xxxs: map-get($spaces, xxxs) map-get($spaces, xxs),
+  xxs: map-get($spaces, xxxs) map-get($spaces, sm),
+  xs: map-get($spaces, xxxs) map-get($spaces, xs),
+  sm: map-get($spaces, xxxs) map-get($spaces, md),
+  md: map-get($spaces, xxxs) map-get($spaces, md),
+  lg: map-get($spaces, xxs) map-get($spaces, lg),
+  xl: map-get($spaces, xxs) map-get($spaces, xl),
+  xxl: map-get($spaces, xxs) map-get($spaces, xxl),
+  xxxl: map-get($spaces, xxs) map-get($spaces, xxxl)
+) ;
+
+
+// ==========================================================================
+// Cards
+// ==========================================================================
+
+$card-margin: 0;
+$card-border: 1px solid $color-light ;
+$card-radius: 0 ;
+$card-bg: $color-lightest ;
+$card-color: $base-color ;
+$card-raised-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.04), 0 0.2rem 1rem 0 rgba(0,0,0,.10) ;
+
+$card-content-padding: map-get($spaces, xxs) ;
+$card-outlined-border: 2px solid transparent ;
+
+
+// ==========================================================================
+// Standalone Typography Modifiers
+// ==========================================================================
+
+$type-bold: 700 ;
+$type-black: 900 ;
+$type-italic: italic ;
+$type-small: 0.7em ;
+$type-caps: small-caps ;

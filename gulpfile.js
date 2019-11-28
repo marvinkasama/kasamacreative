@@ -41,7 +41,8 @@ const gulp = require( 'gulp' ),
       "sass":{
         "src":"./src/scss/theme.scss",
         "includePaths":[
-          "./node_modules"
+          "./node_modules",
+          "./node_modules/tent-css/src"
       ]
       }
 

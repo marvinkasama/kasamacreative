@@ -1,0 +1,125 @@
+@include b( card ) {
+  position: relative;
+  @include m( project ) {
+    &::before {
+      display: block;
+      content: '';
+      padding-bottom: 100%;
+    }
+    @include e( image ) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1);
+      transition: 300ms ease-in-out all;
+      transform: scale(.8);
+    }
+    @include e( body ) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize( $color-darkest, .2);
+        content: '';
+        transition: 300ms ease-in-out all;
+      }
+    }
+    @include e( title ) {
+      position: relative;
+    }
+    &:hover {
+      @include e( image ) {
+        filter: grayscale( 0 );
+        transform: scale(1);
+      }
+      @include e( body ) {
+        &::before {
+          background-color: transparentize( $color-darkest, .8);
+        }
+      }
+    }
+  }
+  @include m( post ) {
+    &::before {
+      display: block;
+      content: '';
+      padding-bottom: 100%;
+    }
+    @include e( image ) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1);
+      transition: 300ms ease-in-out all;
+      transform: scale(.8);
+    }
+    @include e( body ) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize( $color-darkest, .2);
+        content: '';
+        transition: 300ms ease-in-out all;
+      }
+    }
+    @include e( title ) {
+      position: relative;
+    }
+    &:hover {
+      @include e( image ) {
+        filter: grayscale( 0 );
+        transform: scale(1);
+      }
+      @include e( body ) {
+        &::before {
+          background-color: transparentize( $color-darkest, .8);
+        }
+      }
+    }
+  }
+}

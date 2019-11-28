@@ -31,7 +31,7 @@ sitemap.xml.gz
 
 # Foundation - run bower update to get foundation files
 bower_components/*
-node_modules/*
+node_modules
 npm-debug.log
 
 # Compiled CSS

@@ -1,0 +1,10 @@
+@include b( header ) {
+  background-color: $color-primary;
+  @include e( link ) {
+    padding: rem( 16px );
+    display: inline-block;
+    &:hover {
+      color: $color-lightest;
+    }
+  }
+}

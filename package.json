@@ -8,6 +8,7 @@
     "gulp-util": "^3.0.8",
     "gulp-yaml": "^2.0.4",
     "jquery": "^3.4.1",
+    "tent-css": "^1.4.3",
     "what-input": "^5.2.3"
   },
   "devDependencies": {

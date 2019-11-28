@@ -1,0 +1,38 @@
+@include b( menu ) {
+  list-style: none;
+  margin-bottom: rem( 0px );
+
+  li {
+    display: block;
+    margin-bottom: 0;
+  }
+  a {
+    display: block;
+    padding: rem( 16px );
+    color: $color-lightest;
+    font-size: rem( 16px );
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  @include m( header ) {
+    display: none;
+    @include breakpoint-min( lg ) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+
+  @include m( mobile ) {
+    @include breakpoint-min( lg ) {
+      display: none;
+    }
+  }
+
+  @include m( footer ) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
