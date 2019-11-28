@@ -1,12 +1,31 @@
 <?php get_header(); ?>
     <div <?php post_class( 'body-wrap' ); ?>>
-      <div class="container container--fluid padding-xl">
+      <div class="container container--fluid padding-xl bg-color-light">
         <h1 class="title title--xxxl type-center color-primary">Kasama Creative</h1>
         <h2 class="subtitle subtitle--xxl type-center color-secondary">Your Creative Partner</h2>
       </div>
+      <?php if( have_posts() ) { ?>
       <div class="grid padding-y padding-xl">
         <div class="grid__column grid__column--12 grid__column--2--lg"></div>
-        <div class="grid__column grid__column--12 grid__column--8--lg padding-md">
+
+
+      <?php
+        while( have_posts() ) { ?>
+          <?php the_post(); ?>
+          <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
+
+            <?php the_content(); ?>
+          </div>
+      <?php
+        } ?>
+        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
+
+    </div>
+    <?php
+    } ?>
+      <div class="grid padding-y padding-xl">
+        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
+        <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
           <h2 class="title title--xxl color-primary">
             Recent Projects
           </h2>
@@ -46,7 +65,7 @@
       </div>
       <div class="grid padding-y padding-xl">
         <div class="grid__column grid__column--12 grid__column--2--lg"></div>
-        <div class="grid__column grid__column--12 grid__column--8--lg padding-md">
+        <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
           <h2 class="title title--xxl color-secondary">
             Recent Posts
           </h2>

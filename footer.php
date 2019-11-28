@@ -17,7 +17,7 @@
         ?>
       </div>
       <div class="grid__column grid__column--12">
-        <p class="type-center color-lightest">&copy; <?php the_date( 'Y' ); ?> Kasama Creative</p>
+        <p class="type-center color-lightest">&copy; <?= get_the_date( 'Y' ); ?> Kasama Creative</p>
       </div>
     </footer>
     <?php wp_footer(); ?>
