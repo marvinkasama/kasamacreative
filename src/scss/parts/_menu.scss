@@ -33,6 +33,9 @@
   @include m( footer ) {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    @include breakpoint-min( lg ) {
+      justify-content: flex-end;
+    }
   }
 }

@@ -15,7 +15,7 @@
           <div class="container container--fluid <?= $hero_styles; ?>" <?php if( has_post_thumbnail() ) { ?> style="background-image:url( <?php the_post_thumbnail_url( 'large' ); ?> )" <?php } ?> >
             <div class="grid grid--gutterless">
               <div class="grid__column grid__column--2--lg"></div>
-              <div class="grid__column grid__column--8--lg">
+              <div class="grid__column grid__column--12 grid__column--8--lg">
                 <h1 class="title title--xxxl type-center <?= $title_styles; ?>"><?php the_title(); ?></h1>
 
                 <div class="list list--inline type-center padding-md padding-x">
