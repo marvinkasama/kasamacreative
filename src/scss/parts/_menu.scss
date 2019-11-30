@@ -25,11 +25,31 @@
   }
 
   @include m( mobile ) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-darkest;
+    z-index: 10;
+    transition: 300ms ease-in-out all, 100ms ease-in-out opacity;
+    transform: translateX(100vw);
+    opacity: 0;
+    a {
+      font-size: rem( 20px );
+    }
     @include breakpoint-min( lg ) {
       display: none;
     }
   }
-
+  @include m( active ) {
+    transform: translateX(0);
+    opacity: 1;
+  }
   @include m( footer ) {
     display: flex;
     flex-direction: row;

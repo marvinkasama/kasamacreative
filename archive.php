@@ -17,7 +17,7 @@
             <div class="grid grid--gutterless">
               <div class="grid__column grid__column--2--lg"></div>
               <div class="grid__column grid__column--12 grid__column--8--lg">
-                <h1 class="title title--xxxl type-center <?= $title_styles; ?>">Projects</h1>
+                <h1 class="title title--xxxl type-center <?= $title_styles; ?>"><?= get_the_archive_title(); ?></h1>
               </div>
               <div class="grid__column grid__column--2--lg"></div>
             </div>

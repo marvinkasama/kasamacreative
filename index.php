@@ -17,12 +17,12 @@
               <div class="grid__column grid__column--2--lg"></div>
               <div class="grid__column grid__column--12 grid__column--8--lg">
                 <h1 class="title title--xxxl type-center <?= $title_styles; ?>"><?php the_title(); ?></h1>
-                <div class="list list--inline type-center padding-xs">
+                <div class="list list--inline type-center">
 
-                  <p class="list__item subtitle subtitle--sm <?= $subtitle_styles; ?>">
+                  <p class="list__item subtitle subtitle--xs <?= $subtitle_styles; ?>">
                     <?= get_the_author_meta( 'display_name' ); ?>
                   </p>
-                  <p class="list__item subtitle subtitle--sm <?= $subtitle_styles; ?>">
+                  <p class="list__item subtitle subtitle--xs <?= $subtitle_styles; ?>">
                     <?php the_date( 'F j, Y' ); ?>
                   </p>
                 </div>
@@ -31,7 +31,7 @@
                   if( $category_list ) { ?>
                     <div class="list list--inline type-center padding-xs">
                       <?php foreach( $category_list as $category_item ) { ?>
-                        <a class="list__item subtitle subtitle--sm <?= $subtitle_styles; ?>" href="<?= get_category_link( $category_item->term_id ); ?>">
+                        <a class="list__item title title--xs <?= $subtitle_styles; ?>" href="<?= get_category_link( $category_item->term_id ); ?>">
                           <?= $category_item->name; ?>
                         </a>
                       <?php
@@ -60,7 +60,5 @@
         } ?>
       <?php
       } ?>
-      <?php get_template_part( 'parts/pagination' ); ?>
-
     </div>
 <?php get_footer(); ?>

@@ -1,0 +1,10 @@
+@include b( pagination ) {
+
+  @include m( wrapper ) {
+    padding: 1rem;
+  }
+  @include m( single ) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

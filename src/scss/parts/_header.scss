@@ -1,10 +1,20 @@
 @include b( header ) {
   background-color: $color-primary;
   @include e( link ) {
-    padding: rem( 16px );
+    padding: .5rem 2.5rem;
     display: inline-block;
+    margin-bottom: .5rem;
+    @include breakpoint-min( lg ) {
+      margin-bottom: 0;
+      padding: 1rem;
+    }
     &:hover {
       color: $color-lightest;
+    }
+  }
+  @include e( menu-button ) {
+    @include breakpoint-min( lg ) {
+      display: none;
     }
   }
 }

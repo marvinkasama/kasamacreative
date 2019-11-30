@@ -1,0 +1,15 @@
+@include b( button ) {
+  @extend .type-bold;
+  @include m( menu-close ) {
+    position: fixed;
+    right: 1rem;
+    top: 2rem;
+    z-index: 11;
+    transform: translateX( 100vw );
+    transition: 300ms ease-in-out all;
+    font-weight: 700;
+  }
+  @include m( menu-active ) {
+    transform: translateX(0);
+  }
+}

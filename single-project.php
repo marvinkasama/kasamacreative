@@ -23,7 +23,7 @@
                   if( $category_list ) { ?>
                     <div class="list list--inline type-center padding-xs">
                       <?php foreach( $category_list as $category_item ) { ?>
-                        <a class="list__item subtitle subtitle--sm <?= $subtitle_styles; ?>" href="<?= get_category_link( $category_item->term_id ); ?>">
+                        <a class="list__item title title--xs <?= $subtitle_styles; ?>" href="<?= get_category_link( $category_item->term_id ); ?>">
                           <?= $category_item->name; ?>
                         </a>
                       <?php
@@ -53,7 +53,6 @@
         } ?>
       <?php
       } ?>
-      <?php get_template_part( 'parts/pagination' ); ?>
 
     </div>
 <?php get_footer(); ?>
