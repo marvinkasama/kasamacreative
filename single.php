@@ -52,6 +52,7 @@
             <div class="grid__column grid__column--12 grid__column--2--lg"></div>
             <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
               <?php the_content(); ?>
+
             </div>
             <div class="grid__column grid__column--12 grid__column--2--lg"></div>
 
