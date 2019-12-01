@@ -61,4 +61,11 @@
       }
       return $title;
   });
+
+  function add_custom_pt( $query ) {
+    if (  is_category() && $query->is_main_query() ) {
+      $query->set( 'post_type', array( 'post', 'project' ) );
+    }
+  }
+  add_action( 'pre_get_posts', 'add_custom_pt' );
 ?>
