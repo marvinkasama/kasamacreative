@@ -35,12 +35,13 @@
     align-items: center;
     justify-content: center;
     background-color: $color-darkest;
-    z-index: 10;
+    z-index: 100;
     transition: 300ms ease-in-out all, 100ms ease-in-out opacity;
     transform: translateX(100vw);
     opacity: 0;
     a {
-      font-size: rem( 20px );
+      font-size: rem( 24px );
+      padding: rem( 24px );
     }
     @include breakpoint-min( lg ) {
       display: none;
@@ -54,8 +55,17 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     @include breakpoint-min( lg ) {
       justify-content: flex-end;
+    }
+    a {
+      font-size: rem( 20px );
+      padding: rem( 20px );
+      @include breakpoint-min( lg ) {
+        font-size: rem( 16px )
+        padding: rem( 16px );
+      }
     }
   }
 }

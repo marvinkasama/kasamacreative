@@ -1,9 +1,18 @@
 @include b( header ) {
   background-color: $color-primary;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 11;
+  @include breakpoint-min( lg ) {
+    position: fixed;
+  }
   @include e( link ) {
     padding: .5rem 2.5rem;
     display: inline-block;
     margin-bottom: .5rem;
+    border-bottom: 2px solid transparent;
     @include breakpoint-min( lg ) {
       margin-bottom: 0;
       padding: 1rem;

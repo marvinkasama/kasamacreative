@@ -9,7 +9,7 @@
             $subtitle_styles = 'color-lightest';
           } else {
             $hero_styles = 'padding-md bg-color-light';
-            // $title_styles = 'color-primary';
+            $title_styles = 'color-primary';
             $subtitle_styles = 'color-medium';
           } ?>
           <div class="container container--fluid <?= $hero_styles; ?>" <?php if( has_post_thumbnail() ) { ?> style="background-image:url( <?php the_post_thumbnail_url( 'large' ); ?> )" <?php } ?> >

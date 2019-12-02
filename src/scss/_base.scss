@@ -20,6 +20,10 @@
 body {
   display: flex;
   flex-direction: column;
+  font-size: 1.5em;
+  @include breakpoint-min( lg ) {
+    font-size: 1em;
+  }
 }
 
 @include b( body-wrap ) {
