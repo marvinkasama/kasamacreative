@@ -1,0 +1,9 @@
+@include b( nf-form-cont ) {
+  max-width: map-get( $breakpoints, md );
+    input[ type=button ] {
+      @extend .button;
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+      cursor: pointer;
+    }
+}

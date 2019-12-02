@@ -6,27 +6,26 @@
       </div>
       <?php if( have_posts() ) { ?>
       <div class="grid padding-y padding-xl">
-        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
+        <div class="grid__column grid__column--12 grid__column--3--lg"></div>
 
 
       <?php
         while( have_posts() ) { ?>
           <?php the_post(); ?>
-          <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
+          <div class="grid__column grid__column--12 container grid__column--6--lg padding-md">
 
             <?php the_content(); ?>
           </div>
       <?php
         } ?>
-        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
+        <div class="grid__column grid__column--12 grid__column--3--lg"></div>
 
     </div>
     <?php
     } ?>
       <div class="grid padding-y padding-xl">
-        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
-        <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
-          <h2 class="title title--xxl color-primary">
+        <div class="grid__column grid__column--12 container grid__column--6--lg padding-md">
+          <h2 class="title title--xxl type-center color-primary">
             Recent Projects
           </h2>
           <?php
@@ -48,7 +47,7 @@
                     <?php
                     } ?>
                     <div class="card__body">
-                      <h3 class="title title--xlarge color-lightest card__title"><?php the_title(); ?></h3>
+                      <h3 class="title title--large color-lightest card__title"><?php the_title(); ?></h3>
                     </div>
 
                   </a>
@@ -60,13 +59,8 @@
           <?php
           } ?>
         </div>
-        <div class="grid__column grid__column--12 grid__column--2--lg">
-        </div>
-      </div>
-      <div class="grid padding-y padding-xl">
-        <div class="grid__column grid__column--12 grid__column--2--lg"></div>
-        <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
-          <h2 class="title title--xxl color-secondary">
+        <div class="grid__column grid__column--12 container grid__column--6--lg padding-md">
+          <h2 class="title title--xxl type-center color-secondary">
             Recent Posts
           </h2>
           <?php
@@ -88,7 +82,7 @@
                     <?php
                     } ?>
                     <div class="card__body">
-                      <h3 class="title title--xlarge color-primary card__title"><?php the_title(); ?></h3>
+                      <h3 class="title title--large color-primary card__title"><?php the_title(); ?></h3>
                     </div>
                   </a>
                 </div>
@@ -100,8 +94,9 @@
           } ?>
 
         </div>
-        <div class="grid__column grid__column--12 grid__column--2--lg">
-        </div>
+      </div>
+      <div class="grid padding-y padding-xl">
+
       </div>
     </div>
 <?php get_footer(); ?>

@@ -63,7 +63,7 @@
       font-size: rem( 20px );
       padding: rem( 20px );
       @include breakpoint-min( lg ) {
-        font-size: rem( 16px )
+        font-size: rem( 16px );
         padding: rem( 16px );
       }
     }

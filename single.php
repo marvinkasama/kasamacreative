@@ -14,8 +14,8 @@
           } ?>
           <div class="container container--fluid <?= $hero_styles; ?>" <?php if( has_post_thumbnail() ) { ?> style="background-image:url( <?php the_post_thumbnail_url( 'large' ); ?> )" <?php } ?> >
             <div class="grid grid--gutterless">
-              <div class="grid__column grid__column--2--lg"></div>
-              <div class="grid__column grid__column--12 grid__column--8--lg">
+              <div class="grid__column grid__column--3--lg"></div>
+              <div class="grid__column grid__column--12 grid__column--6--lg">
                 <h1 class="title title--xxxl type-center <?= $title_styles; ?>"><?php the_title(); ?></h1>
                 <div class="list list--inline type-center">
 
@@ -44,17 +44,17 @@
                 ?>
 
               </div>
-              <div class="grid__column grid__column--2--lg"></div>
+              <div class="grid__column grid__column--3--lg"></div>
             </div>
 
           </div>
           <div class="grid padding-y padding-xl">
-            <div class="grid__column grid__column--12 grid__column--2--lg"></div>
-            <div class="grid__column grid__column--12 container grid__column--8--lg padding-md">
+            <div class="grid__column grid__column--12 grid__column--3--lg"></div>
+            <div class="grid__column grid__column--12 container grid__column--6--lg padding-md">
               <?php the_content(); ?>
 
             </div>
-            <div class="grid__column grid__column--12 grid__column--2--lg"></div>
+            <div class="grid__column grid__column--12 grid__column--3--lg"></div>
 
           </div>
         <?php
