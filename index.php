@@ -16,7 +16,7 @@
             <div class="grid grid--gutterless">
               <div class="grid__column grid__column--3--lg"></div>
               <div class="grid__column grid__column--12 grid__column--6--lg">
-                <h1 class="title title--xxxl type-center <?= $title_styles; ?>"><?php the_title(); ?></h1>
+                <h1 class="title title--xxxl type-center"><a class="<?= $title_styles; ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                 <div class="list list--inline type-center">
 
                   <p class="list__item subtitle subtitle--xs <?= $subtitle_styles; ?>">

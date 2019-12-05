@@ -40,7 +40,7 @@
               <?php while( $p_query->have_posts() ) {
                 $p_query->the_post();
                 ?>
-                <div class="grid__column grid__column--6--md grid__column--12 padding-sm">
+                <div class="grid__column grid__column--6--xl grid__column--12 padding-sm">
                   <a href="<?php the_permalink(); ?>" class="card card--project type-center">
                     <?php if( has_post_thumbnail() ) { ?>
                       <?php the_post_thumbnail( 'large', [ 'class' => 'card__image' ] )?>
@@ -75,7 +75,7 @@
               <?php while( $p_query->have_posts() ) {
                 $p_query->the_post();
                 ?>
-                <div class="grid__column grid__column--6--md grid__column--12 padding-sm">
+                <div class="grid__column grid__column--6--xl grid__column--12 padding-sm">
                   <a href="<?php the_permalink(); ?>" class="type-center card card--post">
                     <?php if( has_post_thumbnail() ) { ?>
                       <?php the_post_thumbnail( 'large', [ 'class' => 'card__image' ] )?>
