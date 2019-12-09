@@ -8,6 +8,9 @@
     transform: translateX( 100vw );
     transition: 300ms ease-in-out all;
     font-weight: 700;
+    @include breakpoint-min( lg ) {
+      display: none;
+    }
   }
   @include m( menu-active ) {
     transform: translateX(0);
